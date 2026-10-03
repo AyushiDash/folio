@@ -398,8 +398,33 @@ class _DocumentDetailScreenState extends State<DocumentDetailScreen> {
                         icon: Icons.delete_outline_rounded,
                         danger: true,
                         onTap: () async {
-                          await widget.repository.deletePage(page.id!);
-                          _loadPages();
+                          final confirmed = await showDialog<bool>(
+                            context: context,
+                            builder: (ctx) => AlertDialog(
+                              backgroundColor: theme.bg,
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+                              title: Text('Delete Page?', style: TextStyle(color: theme.text, fontWeight: FontWeight.w900)),
+                              content: Text(
+                                'Are you sure you want to delete Page ${index + 1}? This cannot be undone.',
+                                style: TextStyle(color: theme.textSub, fontWeight: FontWeight.w600),
+                              ),
+                              actions: [
+                                TextButton(
+                                  onPressed: () => Navigator.pop(ctx, false),
+                                  child: Text('Cancel', style: TextStyle(color: theme.textSub, fontWeight: FontWeight.w700)),
+                                ),
+                                TextButton(
+                                  onPressed: () => Navigator.pop(ctx, true),
+                                  child: const Text('Delete', style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.w800)),
+                                ),
+                              ],
+                            ),
+                          );
+
+                          if (confirmed == true) {
+                            await widget.repository.deletePage(page.id!);
+                            _loadPages();
+                          } //changed full code here.
                         },
                       ),
                     ],
@@ -582,7 +607,7 @@ class _PageActionButton extends StatelessWidget {
   final VoidCallback onTap;
   final bool danger;
 
-  const _PageActionButton({required this.icon, required this.onTap, this.danger = false});
+  const _PageActionButton({required this.icon, required this.onTap, this.danger = true}); //changed. danger = true.
 
   @override
   Widget build(BuildContext context) {

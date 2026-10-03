@@ -27,10 +27,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   String _greeting() {
     final h = DateTime.now().hour;
-    if (h < 12) return 'Good Morning ☀️';
-    if (h < 17) return 'Good Afternoon 🌤';
-    if (h < 21) return 'Good Evening 🌙';
-    return 'Good Night 🌟';
+    if (h < 12) return 'Morning Buddy! ☀️'; //changed
+    if (h < 17) return 'Pleasant Afternoon 🌤'; //changed
+    if (h < 21) return 'Rocking Evening 🌙'; //changed
+    return 'Sleepy Night 🌟'; //changed
   }
 
   @override
@@ -196,7 +196,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 icon: Icons.create_new_folder_outlined,
                 onTap: onAdd,
                 size: 40,
-                tooltip: 'New Folder',
+                tooltip: 'New Folder?', //changed
               ),
           ],
         ),
@@ -218,7 +218,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 Icon(Icons.folder_open_rounded, color: theme.textSub, size: 28),
                 const SizedBox(width: 12),
                 Text(
-                  'No folders yet. Create one above.',
+                  'No folders yet :( Create one above!', //changed
                   style: TextStyle(color: theme.textSub, fontWeight: FontWeight.w700),
                 ),
               ],
@@ -263,12 +263,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 Icon(Icons.document_scanner_outlined, size: 56, color: theme.textSub.withValues(alpha: 0.4)),
                 const SizedBox(height: 12),
                 Text(
-                  'No scans yet',
+                  'No scans yet :(', //changed
                   style: TextStyle(color: theme.text, fontWeight: FontWeight.w800, fontSize: 16),
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  'Tap Scan to get started',
+                  'Tap Scan to get started! : )', //changed
                   style: TextStyle(color: theme.textSub, fontWeight: FontWeight.w600, fontSize: 13),
                 ),
               ],

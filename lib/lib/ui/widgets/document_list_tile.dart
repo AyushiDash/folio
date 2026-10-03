@@ -31,7 +31,7 @@ class DocumentListTile extends StatelessWidget {
           color: Colors.redAccent.withValues(alpha: 0.15),
           borderRadius: BorderRadius.circular(20),
         ),
-        child: const Icon(Icons.delete_outline_rounded, color: Colors.redAccent, size: 26),
+        child: const Icon(Icons.delete_outline_rounded, color: Colors.deepOrangeAccent, size: 26),
       ),
       confirmDismiss: (_) => _confirmDelete(context, theme),
       onDismissed: (_) => onDelete(),

@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-// ─── Neumorphic Color Palette ─────────────────────────────────────────────────
+// ─── Changed Color Palette ─────────────────────────────────────────────────
 
 class FolioColors {
   // Day (Light) — 06:00 → 19:00
-  static const Color dayBg = Color(0xFFE0E5EC);
+  static const Color dayBg = Color(0xFFCCFF33);//changed
   static const Color dayDarkShadow = Color(0xFFA3B1C6);
   static const Color dayLightShadow = Color(0xFFFFFFFF);
-  static const Color dayText = Color(0xFF2D3748);
-  static const Color dayTextSub = Color(0xFF718096);
-  static const Color dayAccent = Color(0xFF673AB7);
+  static const Color dayText = Color(0xFF004B23); //changed
+  static const Color dayTextSub = Color(0xFF9EF01A); //changed
+  static const Color dayAccent = Color(0xFF007200); //changed
   static const Color dayAccentSoft = Color(0xFFEDE7F6);
   static const Color dayCard = Color(0xFFE4EAF2);
 
   // Night (Dark) — 19:00 → 06:00
-  static const Color nightBg = Color(0xFF1A1D2E);
-  static const Color nightDarkShadow = Color(0xFF11131F);
-  static const Color nightLightShadow = Color(0xFF252840);
-  static const Color nightText = Color(0xFFE2E8F0);
-  static const Color nightTextSub = Color(0xFF94A3B8);
-  static const Color nightAccent = Color(0xFFAB82F0);
-  static const Color nightAccentSoft = Color(0xFF2A1F45);
-  static const Color nightCard = Color(0xFF1E2136);
+  static const Color nightBg = Color(0xFFE0AAFF);//changed made light
+  static const Color nightDarkShadow = Color(0xFF9d4edd); //changed
+  static const Color nightLightShadow = Color(0xFF9D4EDD); //changed
+  static const Color nightText = Color(0xFF240046); //changed. made dark
+  static const Color nightTextSub = Color(0xFF3C096C); //changed. made dark
+  static const Color nightAccent = Color(0xFF3C096C); //changed
+  static const Color nightAccentSoft = Color(0xFF7B2CBF); //changed
+  static const Color nightCard = Color(0xFFC77DFF); //changed
 }
 
 // ─── Shadow Presets ──────────────────────────────────────────────────────────
